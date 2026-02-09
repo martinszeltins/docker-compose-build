@@ -8,3 +8,5 @@
 
 1. **Pull/build images**: `docker compose up`
 2. **Push images**: `docker compose push`
+
+_If you change Dockerfile and want to rebuild existing image, you can run `docker compose up -d --build` and `docker compose push` to push the updated image to registry._
