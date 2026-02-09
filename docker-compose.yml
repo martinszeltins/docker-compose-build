@@ -2,7 +2,7 @@ services:
   dcbuild-client:
     container_name: dcbuild-client
     build: docker/images/client
-    image: ghcr.io/martinszeltins/dcbuild-client:2026-02-09.3
+    image: ghcr.io/martinszeltins/dcbuild-client:2026-02-09.2
     ports:
       - "8080:80"
     volumes:
@@ -11,7 +11,7 @@ services:
   dcbuild-server:
     container_name: dcbuild-server
     build: docker/images/server
-    image: ghcr.io/martinszeltins/dcbuild-server:2026-02-09.3
+    image: ghcr.io/martinszeltins/dcbuild-server:2026-02-09.2
     ports:
       - "8081:80"
     volumes:
