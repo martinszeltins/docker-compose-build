@@ -1,0 +1,18 @@
+services:
+  dcbuild-client:
+    container_name: dcbuild-client
+    build: docker/images/client
+    image: ghcr.io/martinszeltins/dcbuild-client:2026-02-09.3
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/var/www/html/index.html:ro
+
+  dcbuild-server:
+    container_name: dcbuild-server
+    build: docker/images/server
+    image: ghcr.io/martinszeltins/dcbuild-server:2026-02-09.3
+    ports:
+      - "8081:80"
+    volumes:
+      - ./index.html:/var/www/html/index.html:ro
